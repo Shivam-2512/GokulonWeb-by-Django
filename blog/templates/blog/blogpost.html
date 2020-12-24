@@ -1,0 +1,59 @@
+{% extends 'shop/basic.html' %}
+{% block title %}Blogpost{% endblock %}
+{% block body %}
+<div class="container">
+<main role="main" class="container">
+    <div class="row mt-4">
+      <div class="col-md-8 blog-main">
+        <h3 class="pb-3 mb-4 font-italic border-bottom">
+          
+          {{post.title}}
+        </h3>
+
+        <div class="blog-post">
+          <p class="blog-post-meta">{{post.pub_date}} by <a href="#">Mark</a></p>
+          <h2 class="blog-post-title">{{post.haed0}}</h2>
+          
+
+          {{post.ch0}}
+          <h2>{{post.head1}}</h2>
+          <p>{{post.ch1}}</p>
+          <h3>{{post.head2}}</h3>
+          <p>{{post.ch2}}</p>
+          
+          <div class="fb-comments" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-numposts="1" data-width=""></div>
+          <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+        </div><!-- /.blog-post -->
+
+        
+
+       
+
+        
+
+      </div><!-- /.blog-main -->
+
+      <aside class="col-md-4 blog-sidebar">
+        <div class="p-3 mb-3 bg-light rounded">
+          <h4 class="font-italic">About</h4>
+          <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p><br>
+          <div class="fb-share-button" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fblog%2Fblogpost%2F1&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        </div>
+
+        
+
+        <div class="p-3">
+          <h4 class="font-italic">Contact Us on</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </aside><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+  </main>
+</div>
+{% endblock %}
